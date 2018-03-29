@@ -4,11 +4,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow: hidden;
 }
 
 .form-container {
-  margin-top: 2%;
+  margin-top: 3%;
   margin-left: 50%;
   margin-right: 20%;
 }
