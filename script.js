@@ -13,11 +13,11 @@ function showError(error) {
         alert(message);
 }
 
-dpd.users.me(function(user) {
-      if (user) {
-        location.href = "https://www.youtube.com";
-      }
-    });
+// dpd.users.me(function(user) {
+//       if (user) {
+//         location.href = "https://www.youtube.com";
+//       }
+//     });
 
 $('#main-form').submit(function() {
     var usrname = $('#txtEmail').val();
