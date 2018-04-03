@@ -22,7 +22,8 @@ body {
 }
 
 .buttons {
-  margin-left: 85%;
+  float: right;
+  padding-right: 1%;
 }
 
 /** Button Style **/
@@ -35,10 +36,9 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  text-transform: uppercase;
   text-shadow: rgba(0, 0, 0, 0.30) 0 -1.25px 0;
   /** Button Style **/
-  display: -moz-inline-stack;
+  /* display: -moz-inline-stack; */
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   vertical-align: middle;
@@ -66,3 +66,4 @@ body {
   -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
   -moz-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
   box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
+}
