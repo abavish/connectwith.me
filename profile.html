@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/profile_styles.css">
+  <link rel="stylesheet" type="text/css" href="css/ProfButton.css">
+  <link rel="stylesheet" type="text/css" href="css/ProfTopBar.css">
+
+  <title>Profile Page</title>
+</head>
+
+<body>
+<!-- Header - - - - - - - - - - - - - - - - - - - - - -->
+  <div class="top-bar">
+    <img src="img/logo.png" alt="Top Bar" class="logo">
+    <nav class="buttons">
+      <a href="/" class="button">Logout</a>
+    </nav>
+  </div>
+
+    <!-- Profile Container split into two sections (top/bottom) -->
+    <div class="profile-container page-wrap">
+      <div class="w3-container w3-center w3-margin w3-card-4">
+        <!-- Top Container for profile information(profile image,name,logo,about me paragraph) -->
+        <div class="w3-container w3-cell-top" >
+          <img src="img/After+Hours.png" alt="Profile" class="w3-margin-top w3-image" style="width:50%" align="middle" id="profilePic">
+          <h2 id="profileName">My Name</h2>
+          <p id="profileAbout">
+            Write information about yourself!
+          </p>
+        </div>
+        <!-- Bottom Container for contact information and social media links -->
+        <!-- Contains two cotainers put in a row(left/right), each taking 50% space -->
+        <div class="w3-container w3-cell-bottom w3-cell-row">
+          <div class="w3-container w3-cell" style="width:50%">
+            <h3>Contact Information</h3>
+            <h4 id="profilePhone">999-999-9999</h4>
+            <h4 id="profileEmail">email@csu.fullerton.edu</h4>
+          </div>
+          <div class="w3-container w3-cell" style="width:50%">
+            <h3>Social Media</h3>
+            <a href="" id="fb_link" onclick="" hidden><i class="fa fa-facebook-square"></i></a>
+            <a href="" id="t_link" onclick="" hidden><i class="fa fa-twitter-square"></i></a>
+            <a href="" id="i_link" onclick="" hidden><i class="fa fa-instagram"></i></a>
+            <a href="" id="l_link" onclick="" hidden><i class="fa fa-linkedin-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+<div align="right">
+<footer class="site-footer w3-black w3-align-right">
+      <p>Copyright &#169; 2018 connectwith.me, Inc. All rights reserved.</p>
+    </footer>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+</body>
+
+</html>

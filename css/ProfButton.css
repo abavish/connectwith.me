@@ -1,11 +1,3 @@
-body {
-  background: url("../img/backgroundimg.jpeg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .container .heading {
   margin-top: 14%;
   margin-left: 10%;
@@ -22,7 +14,8 @@ body {
 }
 
 .buttons {
-  margin-left: 85%;
+  float: right;
+  padding-right: 1%;
 }
 
 /** Button Style **/
@@ -35,10 +28,9 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  text-transform: uppercase;
   text-shadow: rgba(0, 0, 0, 0.30) 0 -1.25px 0;
   /** Button Style **/
-  display: -moz-inline-stack;
+  /* display: -moz-inline-stack; */
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   vertical-align: middle;
@@ -46,8 +38,8 @@ body {
   zoom: 1;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 1px solid #13619f;
-  background: #2371b7;
+  border: 1px solid #96463a;
+  background: #b64737;
   padding: 11px 20px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -66,3 +58,4 @@ body {
   -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
   -moz-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
   box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
+}
