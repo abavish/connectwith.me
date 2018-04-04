@@ -1,5 +1,8 @@
 $(document).ready(function() {
-  $('#contact_form').bootstrapValidator({
+
+  var file = []; //array to hold image file
+
+  /*$('#signup_form').bootstrapValidator({
     // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
     feedbackIcons: {
       valid: 'glyphicon glyphicon-ok',
@@ -88,25 +91,13 @@ $(document).ready(function() {
 
         }
       },
-      image: {
-        validators: {
-          notEmpty: {
-            message: 'Please provide your image'
-          }
-        }
-      },
+    },
+    function(e){
+      e.preventDefault();
+      alert("HEEEEEE");
     }
-  })
+  })*/
 
-  function ValidateSize(file) {
-    var FileSize = file.files[0].size / 1024 / 1024; // in MB
-    if (FileSize > 2) {
-      alert('File size exceeds 2 MB');
-      $(file).val(''); //for clearing with Jquery
-    } else {
-
-    }
-  }
 
 //$(document).ready(function() {
   $(document).on('change', '.btn-file :file', function() {
@@ -116,7 +107,7 @@ $(document).ready(function() {
   });
 
   $('.btn-file :file').on('fileselect', function(event, label) {
-    var input = $(this).parents('.input-group').find(':jpg'),
+    var input = $(this).parents('.input-group'),
       log = label;
 
       if (input.length) {
@@ -124,6 +115,12 @@ $(document).ready(function() {
       } else {
         if (log) alert(log);
       }
+  });
+
+  
+
+  $("#imgInp").change(function() {
+    readURL(this);
   });
 
   function readURL(input) {
@@ -138,14 +135,16 @@ $(document).ready(function() {
     }
   }
 
-  $("#imgInp").change(function() {
-    readURL(this);
-  });
 
+//********************* DO NOT MODIFY CODE IN BELOW SECTION. CONTAINS IMAGE UPLOAD AND USER ADDITION CODE **************************
+  
   //function to add user to the users collection on button click
-  $('#comment-form').submit(function(event) {
+  $('#signup_form').submit(function(event) {
+    //$('#btnsubmit').closest('form').submit(function(event) {
+    
     event.preventDefault();
     //first store form values in variables
+    
     var first_name = $('first_name').val();
     var last_name = $('last_name').val();
     var profession = $('#profession option:selected').val();
@@ -154,6 +153,35 @@ $(document).ready(function() {
     var email = $('#email').val();
     var contact_no = $('#contact_no').val();
     var about_me = $('#about_me').val();
+
+    var imgFile = $('#imgInp')[0].files[0];
+    file.push(imgFile);
+    console.log(file);
+
+    // Image upload code
+      var fd = new FormData(); //FormData object to store uplpoaded image
+      fd.append("uploadedFile", file[0]);
+
+      var xhr = new XMLHttpRequest();
+
+      //Dynamically assigning a usr property in the imgfileupload collection(in deployd)
+        xhr.open('POST', 'http://localhost:2403/imgfileupload?usr=' + user_name); //associates the image to a unique fragment value
+        xhr.onload = function() {
+            var response = JSON.parse(this.responseText);
+            console.log(response);
+            if (this.status < 300) {
+                console.log("Image Uploaded");
+            } else {
+          alert(response.message);
+            }
+        };
+        xhr.onerror = function(err) {
+            alert("Error: ", err);
+        }
+    
+        xhr.send(fd);
+
+        
 
     //code to add the data to the user collection
     dpd.users.post({
@@ -173,14 +201,29 @@ $(document).ready(function() {
         return;
       }
 
+      alert("User Created");
+      //redirect user to login page
+      location.href = "/index.html";
       
     });
                         //   return false;
                         // }
-
+    
   });
+
+// ***************************************** END OF SECTION **************************************************************
   
 //});
 });
+
+  function ValidateSize(file) {
+    var FileSize = file.files[0].size / 1024 / 1024; // in MB
+    if (FileSize > 2) {
+      alert('File size exceeds 2 MB');
+      $(file).val(''); //for clearing with Jquery
+    } else {
+
+    }
+  }
 
 
