@@ -207,7 +207,7 @@ $(document).ready(function() {
 
       alert("User Created");
       //redirect user to login page
-      location.href = "/index.html";
+      location.href = "/login.html";
       
     });
                         //   return false;
