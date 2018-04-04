@@ -145,14 +145,16 @@ $(document).ready(function() {
     event.preventDefault();
     //first store form values in variables
     
-    var first_name = $('first_name').val();
-    var last_name = $('last_name').val();
+    var first_name = $('#first_name').val();
+    var last_name = $('#last_name').val();
     var profession = $('#profession option:selected').val();
     var user_name = $('#user_name').val();
     var user_password = $('#user_password').val();
     var email = $('#email').val();
     var contact_no = $('#contact_no').val();
     var about_me = $('#about_me').val();
+    var fb_link = $('#fb_url').val();
+    var li_link = $('#li_url').val();
 
     var imgFile = $('#imgInp')[0].files[0];
     file.push(imgFile);
@@ -193,7 +195,9 @@ $(document).ready(function() {
       email: email,
       contactno: contact_no,
       aboutme: about_me,
-      userFragment: user_name
+      userFragment: user_name,
+      fburl: fb_link,
+      liurl: li_link
     }, function(user, err) {
       if (err) {
         // An error could be either the err.message property, or err.errors.title, so we account for either case
