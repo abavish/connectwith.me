@@ -21,7 +21,7 @@ pre{
 
 body{
   /* The image used */
-  background-image: url("img/imagename.jpg");
+  background-image: url("../img/bg3.jpg");
 
   /* Full height */
   height: 100%;
@@ -31,6 +31,15 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
+}
+
+#profilePic{
+  width: 50%;
+  text-align: center;
+}
+
+.width50{
+  width: 50%;
 }
 
 /* Footer will follow the scrollbar and always be at the bottom*/
@@ -74,14 +83,4 @@ body{
   font-size: 35px;
   font-family: "Raleway", sans-serif;
   font-weight: bold
-}
-
-/* Icons */
-.fa-home, .fa-cog, .fa-navicon {
-  font-size: 60px;
-  color: white;
-}
-
-.fa-facebook-square, .fa-twitter-square, .fa-instagram, .fa-linkedin-square {
-  font-size: 40px;
 }
