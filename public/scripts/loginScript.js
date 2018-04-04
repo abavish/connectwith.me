@@ -13,13 +13,18 @@ function showError(error) {
         alert(message);
 }
 
-// dpd.users.me(function(user) {
-//       if (user) {
+redirectFn();
+
+function redirectFn(){
+    dpd.users.me(function(me) {
+        //console.log(me.test);
+        if(me) {
 //         location.href = "/index_copy2.html";
-//       }
-//     }); NEED TO UNCOMMENT AND EDIT FOR HASH
-
-
+            userFragment = me.userFragment;
+            location.href = "/profile.html#" + userFragment;
+        }
+    });
+}
 
 $('#login-form').submit(function() {
     var usrname = $('#txtUname').val();
@@ -30,13 +35,8 @@ $('#login-form').submit(function() {
         if (error) {
           alert(error.message);
         } else {
-            console.log(session);
-            dpd.users.me(function(me) {
-                //console.log(me.test);
-                userFragment = me.userFragment;
-                location.href = "/index_copy2.html#" + userFragment;
-                //location.href = "/index_copy2.html";
-            });
+            // console.log(session);
+            redirectFn();
         }
     });
 
