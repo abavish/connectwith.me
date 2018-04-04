@@ -13,16 +13,21 @@ function showError(error) {
         alert(message);
 }
 
-dpd.users.me(function(user) {
-      if (user) {
-        location.href = "/index_copy2.html";
-      }
+redirectFn();
+
+function redirectFn(){
+    dpd.users.me(function(me) {
+        //console.log(me.test);
+        if(me) {
+//         location.href = "/index_copy2.html";
+            userFragment = me.userFragment;
+            location.href = "/profile.html#" + userFragment;
+        }
     });
+}
 
-
-
-$('#main-form').submit(function() {
-    var usrname = $('#txtEmail').val();
+$('#login-form').submit(function() {
+    var usrname = $('#txtUname').val();
     var pwd = $('#txtPwd').val();
     //var usrFragment = "";
 
@@ -30,13 +35,8 @@ $('#main-form').submit(function() {
         if (error) {
           alert(error.message);
         } else {
-            //console.log(session);
-            // dpd.users.me(function(me) {
-            //   //console.log(me.test);
-            //   usrFragment = me.test;
-            //   location.href = "/index_copy2.html#" + usrFragment;
-            location.href = "/index_copy2.html";
-            // });
+            // console.log(session);
+            redirectFn();
         }
     });
 

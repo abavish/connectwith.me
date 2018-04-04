@@ -1,11 +1,3 @@
-body {
-  background: url("../img/bg3.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .container .heading {
   margin-top: 14%;
   margin-left: 10%;
@@ -13,21 +5,13 @@ body {
   font-size: 45px;
 }
 
-.container .logo{
-  display: block;
-  margin-top: 10%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .container .paragraph {
-  margin-top: 5%;
+  margin-top: 12%;
+  margin-left: 8%;
   color: #ffffff;
   font-family: Georgia, serif;
   font-size: 19px;
 }
-
-
 
 .buttons {
   float: right;
@@ -74,8 +58,4 @@ body {
   -webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
   -moz-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
   box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 1px 4px;
-}
-
-.button:hover{
-  text-decoration: none;
 }
