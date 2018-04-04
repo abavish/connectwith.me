@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="css/profile_styles.css">
   <link rel="stylesheet" type="text/css" href="css/ProfButton.css">
   <link rel="stylesheet" type="text/css" href="css/ProfTopBar.css">
-
+  <link rel="stylesheet" type="text/css" href="css/MediaButtons.css">
+  <link rel="stylesheet prefetch" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <link rel="stylesheet" href="css/btn.css">   <!-- css for buttons -->
   <title>Profile Page</title>
 </head>
 
@@ -41,15 +44,20 @@
             <h4 id="profileEmail">email@csu.fullerton.edu</h4>
           </div>
           <div class="w3-container w3-cell" style="width:50%">
-            <h3>Social Media</h3>
-            <a href="" id="fb_link" onclick="" hidden><i class="fa fa-facebook-square"></i></a>
-            <a href="" id="t_link" onclick="" hidden><i class="fa fa-twitter-square"></i></a>
-            <a href="" id="i_link" onclick="" hidden><i class="fa fa-instagram"></i></a>
-            <a href="" id="l_link" onclick="" hidden><i class="fa fa-linkedin-square"></i></a>
+
+        <!---------------------- buttons -------------------- -->
+         <h3>Social Media</h3>
+        <div class="social-btns">
+              <a class="btn twitter" href="#" id="twt_link"><i class="fa fa-twitter"></i></a>
+              <a class="btn skype" href="#" id="sky_link"><i class="fa fa-skype"></i></a>
+              <a class="btn linkedin" href="#" id="li_link"><i class="fa fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+
 <div align="right">
 <footer class="site-footer w3-black w3-align-right">
       <p>Copyright &#169; 2018 connectwith.me, Inc. All rights reserved.</p>
